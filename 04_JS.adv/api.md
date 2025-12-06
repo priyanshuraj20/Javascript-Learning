@@ -1,7 +1,17 @@
-API ek bridge (pul) hai do systems ke beech —
-jo data exchange karne me help karta hai, bina andar ka code samjhe.
+javascript is synchronous and single threaded //default js behaviour
 
-Data kaise aata hai?
+//Blocking code And non blocking code :When a line of code stops the program until it finishes, it is called blocking code.
+
+📌 Code that does not stop the program from running further.
+It schedules the task, continues to next line, and comes back later when ready.
+
+API ek bridge (pul) hai do systems ke beech —
+jo data exchange karne me help karta hai, bina andar ka code samjhe. or jo do software applications ko baat karne deta hai.
+Aap = user
+Kitchen = backend
+Waiter = API
+
+Hum api request bhejte aur response ata woh Data kaise aata hai?
 Mostly JSON format me
 
 fetch() ek JavaScript function hai jo internet par kisi URL (API) se data mangta (GET) ya data bhejta (POST) hai.

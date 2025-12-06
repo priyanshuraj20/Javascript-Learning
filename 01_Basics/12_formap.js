@@ -14,7 +14,7 @@ const newNums = myNums.filter((num) => num > 4); //if we open scope we have to r
 
 console.log(newNums);
 
-//map
+//map: its explicit return
 const numss = myNums.map((num) => num + 10);
 console.log(numss);
 

@@ -61,7 +61,7 @@ promiseFOur
   .catch((error) => {
     console.log(error);
   })
-  .finally(() => console.log("The Promise is either resolved or rejected "));
+  .finally(() => console.log("The Promise is either resolved or rejected ")); //always execute
 
 //PRomise Five
 const promiseFive = new Promise((resolve, reject) => {
@@ -74,7 +74,7 @@ const promiseFive = new Promise((resolve, reject) => {
     }
   }, 1000);
 });
-
+//aisa nahi nahi hain promise ko tum hamesha .then or .catch se handle karoge promise kya hain : future mein complete hone wale asynchronous kaam ko represent karta hai. toh--->
 //we can handle PRomise :Using async / await
 /*Yeh modern and cleaner way hai — promise ko handle karne ke liye.
 await likhne se JavaScript us line pe ruk jaata hai jab tak promise resolve/reject na ho jaye.
@@ -83,6 +83,7 @@ Lekin await sirf async function ke andar hi likh sakte ho!*/
 
 async function consumePromiseFive() {
   //for error handling we use :try...catch
+  //hmra prmoise designed hain aur error askti hain toh prblm ho skti aur async , await direct problem handle nahi kar skti we use try and catch block
   try {
     let response = await promiseFive;
     console.log(response);
@@ -93,7 +94,6 @@ async function consumePromiseFive() {
 
 consumePromiseFive();
 
-// ✅ Async function banaya (promise handle karne ke liye async/await use karenge)
 async function getAllUsers() {
   try {
     // 🛰️ 1. Fetch API se data le rahe hain (yeh ek promise return karta hai)
@@ -101,6 +101,7 @@ async function getAllUsers() {
 
     // 🔄 2. Response ko JSON (JavaScript Object) me convert kar rahe hain
     // ⚠️ .json() bhi ek promise return karta hai, isliye yahan bhi await lagaya
+    //kbhi bhi response ata fetch se phale type janana chaiye , chalo abhi direct boldeh rahe aap json ban jao
     const data = await response.json();
 
     // 🧾 3. Ab 'data' ek JavaScript array hai (users ka list)
@@ -121,7 +122,7 @@ getAllUsers();
 
 //you will notice that yeh fetch wale code console mein phale print ho rahe:Microtasks (Promises, fetch) always run before normal callbacks (like setTimeout).
 
-// ✅ Promise ko handle kar rahe hain .then() aur .catch() se
+// ✅  same ->Promise ko handle kar rahe hain .then() aur .catch() se
 function getAllUsers() {
   // 🛰️ 1. fetch() se API call kar rahe hain
   fetch("https://jsonplaceholder.typicode.com/users")
