@@ -1,0 +1,37 @@
+let score = "33";
+
+console.log(typeof score);
+let valueInNumber = Number(score); // score string->number
+console.log(typeof valueInNumber);
+//Nan <= "abc132"
+// 0 <= Null
+//undefined <=  when not intialised
+
+let someNumber = 33;
+let StringNumber = String(someNumber);
+console.log(StringNumber);
+
+//**********Operations***** */
+
+let value = 3;
+let negValue = -value;
+console.log(negValue);
+
+let str1 = "hello";
+let str2 = "priyanshu";
+console.log(str1 + str2);
+
+console.log("1" + 2);
+console.log(1 + "2");
+console.log("1" + 2 + 2);
+console.log(1 + 2 + "2");
+
+console.log(undefined < 0);
+console.log(undefined == 0);
+console.log(undefined > 0);
+
+// memories :
+//stack and heap memory
+
+// primitve type -> stack memory  {copy milta}
+// non-primitive type -> heap memory  {refrence milta}
