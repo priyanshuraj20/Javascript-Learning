@@ -84,3 +84,29 @@ const myCoding = [
 myCoding.forEach((item) => {
   console.log(item.langName);
 });
+
+//reduced function:
+// let arrr= [2,4,6,8,9]
+// arr.reduce((acc,cur)=>{
+//   return acc+curr
+// })
+//shift
+
+// arrr.indexOf()
+
+let arr2 =[1,2,3,[2,3,4],5]
+
+let ansss = Array.isArray(arr2)
+console.log(ansss)
+
+let new_arr = arr2.flat(
+console.log(new_arr);
+
+//splice
+
+
+greet = function(name){
+  console.log(name);
+}
+greet("Hello!")
+

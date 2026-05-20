@@ -29,7 +29,7 @@ console.log(h2);
 let idd = document.querySelector("#testing");
 console.log(idd);
 
-//ny class
+//any class
 const classs = document.querySelector(".forTest");
 console.log(classs);
 
